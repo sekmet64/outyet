@@ -23,3 +23,7 @@ class Title(models.Model):
 class Entry(models.Model):
     watchlist = models.ForeignKey(Watchlist)
     title = models.ForeignKey(Title)
+    
+class TrustedUrl(models.Model):
+    url = models.CharField(max_length=50)
+    title = models.ForeignKey(Title)
